@@ -2542,6 +2542,84 @@ h3 {
   }
 }
 
+/* Search-focused content blocks */
+.product-card-media picture,
+.page-hero-media picture,
+.hero-collage picture,
+.chapter-media picture { display: contents; }
+
+.seo-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 28px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.seo-fact { min-width: 0; padding: 22px; }
+.seo-fact + .seo-fact { border-left: 1px solid var(--line); }
+.seo-fact small {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.seo-fact strong { display: block; color: var(--ink); font-size: 1rem; line-height: 1.4; }
+
+.comparison-wrap {
+  overflow-x: auto;
+  margin-top: 28px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  -webkit-overflow-scrolling: touch;
+}
+.comparison-table { width: 100%; min-width: 760px; border-collapse: collapse; color: var(--ink); text-align: left; }
+.comparison-table th,
+.comparison-table td { padding: 16px 18px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.comparison-table thead th { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.comparison-table tbody th { color: var(--accent); white-space: nowrap; }
+.comparison-table tbody tr:last-child th,
+.comparison-table tbody tr:last-child td { border-bottom: 0; }
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 28px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+.faq-item { padding: clamp(24px, 3vw, 36px); background: var(--paper); }
+.faq-item h3 { margin: 0 0 12px; color: var(--ink); font-size: clamp(1.05rem, 1.7vw, 1.3rem); line-height: 1.35; }
+.faq-item p { margin: 0; color: var(--muted); line-height: 1.7; }
+
+.procurement-tender-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(28px, 6vw, 80px);
+  align-items: start;
+}
+.procurement-tender-grid > div:last-child { display: grid; gap: 16px; }
+.procurement-tender-grid p { margin: 0; }
+
+@media (max-width: 900px) {
+  .seo-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .seo-fact:nth-child(3) { border-left: 0; }
+  .seo-fact:nth-child(n + 3) { border-top: 1px solid var(--line); }
+  .procurement-tender-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .seo-facts,
+  .faq-grid { grid-template-columns: 1fr; }
+  .seo-fact + .seo-fact { border-top: 1px solid var(--line); border-left: 0; }
+  .comparison-wrap { margin-right: 0; margin-left: 0; }
+  .faq-item { padding: 22px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -2,44 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lotusmed.com.ua/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-07-16</lastmod>
   </url>
   <url>
-    <loc>https://lotusmed.com.ua/meril.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://lotusmed.com.ua/meril</loc>
+    <lastmod>2026-07-16</lastmod>
   </url>
   <url>
-    <loc>https://lotusmed.com.ua/sinapi.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://lotusmed.com.ua/sinapi</loc>
+    <lastmod>2026-07-16</lastmod>
   </url>
   <url>
-    <loc>https://lotusmed.com.ua/geister.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://lotusmed.com.ua/geister</loc>
+    <lastmod>2026-07-16</lastmod>
   </url>
   <url>
-    <loc>https://lotusmed.com.ua/postachannia.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://lotusmed.com.ua/postachannia</loc>
+    <lastmod>2026-07-16</lastmod>
   </url>
   <url>
-    <loc>https://lotusmed.com.ua/contacts.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lotusmed.com.ua/privacy.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://lotusmed.com.ua/contacts</loc>
+    <lastmod>2026-07-16</lastmod>
   </url>
 </urlset>
