@@ -1366,6 +1366,16 @@ h3 {
 }
 
 @media (max-width: 1080px) {
+  .menu-open .site-header {
+    backdrop-filter: none;
+  }
+
+  .menu-open .brand,
+  .menu-open .menu-toggle {
+    position: relative;
+    z-index: 103;
+  }
+
   .nav-shell {
     grid-template-columns: auto auto;
     justify-content: space-between;
@@ -2134,6 +2144,401 @@ h3 {
     position: fixed;
     top: max(16px, env(safe-area-inset-top));
     right: max(16px, env(safe-area-inset-right));
+  }
+}
+
+/* Procurement page: denser, document-led layout */
+.procurement-page .section.procurement-section {
+  padding-block: clamp(56px, 6vw, 76px);
+}
+
+.procurement-page .procurement-hero {
+  padding-block: 46px 58px;
+}
+
+.procurement-page .procurement-hero .crumbs {
+  margin-bottom: 22px;
+}
+
+.procurement-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(42px, 6vw, 76px);
+  align-items: start;
+}
+
+.procurement-hero-grid h1 {
+  max-width: 620px;
+  margin-bottom: 0;
+}
+
+.procurement-hero-copy {
+  padding-top: 43px;
+}
+
+.procurement-hero-copy .lead {
+  max-width: 650px;
+  margin-bottom: 0;
+}
+
+.procurement-hero-copy .hero-actions {
+  margin-top: 22px;
+}
+
+.procurement-hero-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 26px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  list-style: none;
+}
+
+.procurement-hero-facts li {
+  padding: 13px 14px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.procurement-hero-facts li + li {
+  border-left: 1px solid var(--line);
+}
+
+.procurement-section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: end;
+  gap: clamp(40px, 6vw, 76px);
+  margin-bottom: 30px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid var(--line);
+}
+
+.procurement-section-head h2 {
+  max-width: 620px;
+  margin-bottom: 0;
+}
+
+.procurement-section-head > p {
+  max-width: 610px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.procurement-step-grid,
+.procurement-material-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.procurement-step,
+.procurement-material-grid article {
+  min-width: 0;
+  padding: 24px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.procurement-step {
+  min-height: 220px;
+}
+
+.procurement-step > span,
+.procurement-material-grid article > span {
+  display: block;
+  margin-bottom: 32px;
+  color: var(--petal);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+}
+
+.procurement-step h3,
+.procurement-material-grid h3 {
+  margin-bottom: 9px;
+  font-size: 21px;
+}
+
+.procurement-step p,
+.procurement-material-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.procurement-result {
+  display: grid;
+  grid-template-columns: minmax(210px, 1.25fr) repeat(4, minmax(0, 1fr));
+  margin-top: 22px;
+  color: var(--white);
+  background: var(--ink);
+}
+
+.procurement-result strong,
+.procurement-result span {
+  display: flex;
+  align-items: center;
+  min-height: 68px;
+  padding: 14px 18px;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.procurement-result strong {
+  color: #d79bb2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.procurement-result span {
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.procurement-material-grid article {
+  min-height: 176px;
+  background: rgba(255, 253, 250, 0.56);
+}
+
+.procurement-material-grid article > span {
+  margin-bottom: 25px;
+  color: var(--mineral);
+}
+
+.procurement-page .procurement-notice {
+  margin-top: 22px;
+  padding: 16px 20px;
+}
+
+.procurement-page .request-layout {
+  grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.22fr);
+  align-items: start;
+  gap: clamp(36px, 5vw, 64px);
+}
+
+.procurement-contact-panel {
+  margin-top: 26px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.procurement-contact-panel > strong,
+.procurement-contact-panel > div > span {
+  display: block;
+  color: var(--petal);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.procurement-contact-panel ul {
+  margin: 14px 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.procurement-contact-panel li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.procurement-contact-panel > div {
+  display: grid;
+  gap: 7px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.procurement-contact-panel > div > span {
+  margin-bottom: 3px;
+  color: var(--mineral);
+}
+
+.procurement-contact-panel a {
+  width: fit-content;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.procurement-contact-panel a:hover {
+  color: var(--petal);
+}
+
+.procurement-page .request-form {
+  padding: 32px;
+}
+
+.procurement-page .field-grid {
+  gap: 14px 16px;
+}
+
+.procurement-page .field {
+  gap: 6px;
+  margin-bottom: 0;
+}
+
+.procurement-page .field textarea {
+  min-height: 120px;
+}
+
+.procurement-page .request-form > .button {
+  margin-top: 22px;
+}
+
+@media (max-width: 1080px) {
+  .procurement-step-grid,
+  .procurement-material-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .procurement-page .request-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 760px) {
+  .procurement-page .procurement-hero {
+    padding-block: 32px 42px;
+  }
+
+  .procurement-page .procurement-hero .crumbs {
+    margin-bottom: 18px;
+  }
+
+  .procurement-hero-grid,
+  .procurement-section-head {
+    grid-template-columns: 1fr;
+  }
+
+  .procurement-hero-grid {
+    gap: 20px;
+  }
+
+  .procurement-hero-copy {
+    padding-top: 0;
+  }
+
+  .procurement-hero-copy .hero-actions {
+    margin-top: 20px;
+  }
+
+  .procurement-hero-facts {
+    grid-template-columns: 1fr;
+    margin-top: 22px;
+  }
+
+  .procurement-hero-facts li {
+    padding: 10px 12px;
+  }
+
+  .procurement-hero-facts li + li {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .procurement-page .section.procurement-section {
+    padding-block: 44px;
+  }
+
+  .procurement-section-head {
+    gap: 14px;
+    margin-bottom: 22px;
+    padding-bottom: 20px;
+  }
+
+  .procurement-section-head > p {
+    font-size: 16px;
+  }
+
+  .procurement-step-grid,
+  .procurement-material-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .procurement-step,
+  .procurement-material-grid article {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    column-gap: 12px;
+    padding: 18px;
+  }
+
+  .procurement-step > span,
+  .procurement-material-grid article > span {
+    grid-row: 1 / 3;
+    margin: 2px 0 0;
+  }
+
+  .procurement-step h3,
+  .procurement-step p,
+  .procurement-material-grid h3,
+  .procurement-material-grid p {
+    grid-column: 2;
+  }
+
+  .procurement-step h3,
+  .procurement-material-grid h3 {
+    font-size: 19px;
+  }
+
+  .procurement-result {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 18px;
+  }
+
+  .procurement-result strong {
+    grid-column: 1 / -1;
+  }
+
+  .procurement-result strong,
+  .procurement-result span {
+    min-height: 58px;
+    padding: 12px 14px;
+  }
+
+  .procurement-result span:nth-of-type(odd) {
+    border-left: 0;
+  }
+
+  .procurement-result span:nth-of-type(n + 3) {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .procurement-page .request-layout {
+    gap: 26px;
+  }
+
+  .procurement-contact-panel {
+    margin-top: 22px;
+    padding: 20px;
+  }
+
+  .procurement-page .request-form {
+    padding: 22px 18px;
+  }
+
+  .procurement-page .field-grid {
+    gap: 14px;
+  }
+
+  .procurement-page .request-form > .button {
+    width: 100%;
+    margin-top: 18px;
   }
 }
 
