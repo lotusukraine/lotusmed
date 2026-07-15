@@ -1071,6 +1071,47 @@ h3 {
   color: #d79bb2;
 }
 
+.contact-card > p {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.contact-hours {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.contact-hours h3 {
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-hours dl {
+  margin: 0;
+}
+
+.contact-hours dl div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 7px 0;
+}
+
+.contact-hours dt {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.contact-hours dd {
+  margin: 0;
+  color: var(--white);
+  font-weight: 750;
+  white-space: nowrap;
+}
+
 .legal-list {
   margin: 0;
 }
@@ -1153,6 +1194,14 @@ h3 {
 
 .footer-col a:hover {
   color: var(--white);
+}
+
+.footer-col .footer-hours {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.58);
+  line-height: 1.65;
 }
 
 .footer-bottom {
