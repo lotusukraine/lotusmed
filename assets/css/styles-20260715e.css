@@ -729,6 +729,58 @@ h3 {
   background: linear-gradient(125deg, #f5f1e9 0%, #efe4e9 100%);
 }
 
+.meril-hero-media {
+  min-height: 500px;
+  padding: 14px;
+  background: #e8e4dd;
+}
+
+.meril-hero-showcase {
+  height: 472px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.meril-hero-card {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 24px 22px 40px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.meril-hero-card-primary {
+  grid-row: 1 / -1;
+  padding: 38px 30px 46px;
+  background: #f6f3ed;
+}
+
+.meril-hero-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 18px rgba(33, 24, 39, 0.12));
+}
+
+.meril-hero-card figcaption {
+  position: absolute;
+  right: 18px;
+  bottom: 13px;
+  left: 18px;
+  color: #625a63;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
 .page-hero.sinapi-hero {
   background: linear-gradient(125deg, #f5f1e9 0%, #dce8e3 100%);
 }
@@ -894,6 +946,105 @@ h3 {
 
 .product-card-body .text-link {
   margin-top: auto;
+}
+
+.meril-directions {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 64px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.meril-directions a {
+  min-height: 176px;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 24px;
+  border-right: 1px solid var(--line);
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.meril-directions a:last-child {
+  border-right: 0;
+}
+
+.meril-directions a:hover {
+  background: #eee5e8;
+}
+
+.meril-directions span {
+  margin-bottom: auto;
+  color: var(--petal);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+}
+
+.meril-directions strong {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.meril-directions small {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.meril-category {
+  scroll-margin-top: 110px;
+}
+
+.meril-category + .meril-category {
+  margin-top: 84px;
+}
+
+.meril-category-head {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  align-items: end;
+  gap: 34px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.meril-category-head > span {
+  color: var(--petal);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.meril-category-head h3 {
+  margin-bottom: 6px;
+  font-size: clamp(28px, 3vw, 38px);
+}
+
+.meril-category-head p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.meril-category .product-grid {
+  border-top: 0;
+}
+
+.meril-catalog .product-card {
+  min-height: 500px;
+}
+
+.meril-catalog .product-card-media {
+  height: 250px;
+  padding: 26px;
+  background: linear-gradient(145deg, #f7f4ef, #e9e5de);
+}
+
+.meril-catalog .product-card-media img {
+  object-fit: contain;
+  filter: drop-shadow(0 14px 16px rgba(33, 24, 39, 0.12));
 }
 
 .spec-table {
@@ -1514,6 +1665,90 @@ h3 {
   .footer-bottom {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 1080px) {
+  .meril-directions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .meril-directions a:nth-child(2) {
+    border-right: 0;
+  }
+
+  .meril-directions a:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 760px) {
+  .meril-hero-media {
+    min-height: 520px;
+    padding: 10px;
+  }
+
+  .meril-hero-showcase {
+    height: 500px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: minmax(0, 1.25fr) minmax(0, 0.75fr);
+    gap: 10px;
+  }
+
+  .meril-hero-card-primary {
+    grid-row: auto;
+    grid-column: 1 / -1;
+    padding: 24px 24px 42px;
+  }
+
+  .meril-hero-card {
+    padding: 18px 14px 36px;
+  }
+
+  .meril-hero-card img {
+    min-height: 0;
+  }
+
+  .meril-hero-card figcaption {
+    right: 12px;
+    bottom: 10px;
+    left: 12px;
+    font-size: 8px;
+  }
+
+  .meril-directions {
+    grid-template-columns: 1fr;
+    margin-top: 42px;
+  }
+
+  .meril-directions a,
+  .meril-directions a:nth-child(2) {
+    min-height: 130px;
+    border-top: 1px solid var(--line);
+    border-right: 0;
+  }
+
+  .meril-directions a:first-child {
+    border-top: 0;
+  }
+
+  .meril-category + .meril-category {
+    margin-top: 66px;
+  }
+
+  .meril-category-head {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+
+  .meril-category-head h3 {
+    font-size: 28px;
+  }
+
+  .meril-catalog .product-card-media {
+    height: 230px;
+    padding: 24px;
   }
 }
 
